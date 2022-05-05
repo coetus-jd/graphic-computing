@@ -9,6 +9,7 @@ namespace VisualizationPipeline.Assets.Scripts
     {
         [SerializeField] private Slider Slider;
         [SerializeField] private TMP_Dropdown SpaceSelect;
+        private float PreviousSliderValue;
 
         private (float Min, float Max) Range = (0, 360);
 
@@ -16,12 +17,15 @@ namespace VisualizationPipeline.Assets.Scripts
         {
             var rotation = Slider.value * Range.Max;
 
+            var direction = PreviousSliderValue > Slider.value ? -1 : 1;
+            PreviousSliderValue = Slider.value;
+
             var relativeTo = SpaceSelect.value == (int)Spaces.Self
                 ? Space.Self
                 : Space.World;
 
             ObjectInPipeline.transform.Rotate(
-                new Vector3(0, rotation, 0) * Time.deltaTime,
+                (new Vector3(0, rotation, 0) * Time.deltaTime) * direction,
                 relativeTo
             );
         }
