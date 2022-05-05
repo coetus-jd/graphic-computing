@@ -29,13 +29,10 @@ namespace VisualizationPipeline.Assets.Scripts
                 CreateCustomObject();
         }
 
-        Vector3 MousePosInWorldSpace()
-        {
-            Vector3 mousePos = Input.mousePosition;
-            return Camera.main.ScreenToWorldPoint(
-                new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane)
+        private Vector3 MousePosInWorldSpace() =>
+            Camera.main.ScreenToWorldPoint(
+                new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane)
             );
-        }
 
         public void CreateCustomObject()
         {
