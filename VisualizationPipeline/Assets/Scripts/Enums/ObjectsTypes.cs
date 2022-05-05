@@ -3,7 +3,7 @@ namespace VisualizationPipeline.Assets.Scripts.Enums
     public enum ObjectsTypes
     {
         Cube,
-        Sphere,
+        Capsule,
         Custom
     }
 }

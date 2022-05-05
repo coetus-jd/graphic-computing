@@ -8,7 +8,7 @@ namespace VisualizationPipeline.Assets.Scripts
     public class ObjectCreationController : BasePipeline
     {
         [SerializeField] private GameObject CubePrefab;
-        [SerializeField] private GameObject SpherePrefab;
+        [SerializeField] private GameObject CapsulePrefab;
         [SerializeField] private Dropdown ObjectSelect;
         [SerializeField] private Transform PositionToCreate;
         [SerializeField] private Button CreateButton;
@@ -26,13 +26,13 @@ namespace VisualizationPipeline.Assets.Scripts
             if (ObjectSelect.value == (int)ObjectsTypes.Cube)
                 objectToCreate = CubePrefab;
                 
-            if (ObjectSelect.value == (int)ObjectsTypes.Sphere)
-                objectToCreate = SpherePrefab;
+            if (ObjectSelect.value == (int)ObjectsTypes.Capsule)
+                objectToCreate = CapsulePrefab;
             
             Instantiate(
                 objectToCreate,
                 PositionToCreate.position,
-                Quaternion.identity,
+                objectToCreate.transform.rotation,
                 Objects.transform
             );
         }
