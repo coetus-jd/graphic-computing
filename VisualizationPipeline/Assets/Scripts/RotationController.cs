@@ -29,5 +29,11 @@ namespace VisualizationPipeline.Assets.Scripts
                 relativeTo
             );
         }
+
+        public override void Reset()
+        {
+            Slider.value = 0f;
+            SpaceSelect.value = (int)Spaces.Self;
+        }
     }
 }

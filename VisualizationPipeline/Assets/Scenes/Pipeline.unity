@@ -5119,6 +5119,18 @@ MonoBehaviour:
   ObjectSelect: {fileID: 63463534}
   PositionToCreate: {fileID: 373330210}
   CreateButton: {fileID: 1818593027}
+  ObjectsToDesactive:
+  - {fileID: 1064501724}
+  - {fileID: 1451053428}
+  - {fileID: 1813669250}
+  - {fileID: 106864344}
+  - {fileID: 106864344}
+  - {fileID: 141750695}
+  ObjectsToReset:
+  - {fileID: 2099286650}
+  - {fileID: 1223225010}
+  - {fileID: 982538139}
+  - {fileID: 392697955}
 --- !u!1 &1344149765
 GameObject:
   m_ObjectHideFlags: 0

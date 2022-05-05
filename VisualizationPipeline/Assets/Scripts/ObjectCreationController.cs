@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,12 +8,24 @@ namespace VisualizationPipeline.Assets.Scripts
 {
     public class ObjectCreationController : BasePipeline
     {
+        [Header("Prefabs")]
         [SerializeField] private GameObject CubePrefab;
         [SerializeField] private GameObject CapsulePrefab;
         [SerializeField] private GameObject CustomObjectPrefab;
+
+        [Header("Inputs")]
         [SerializeField] private Dropdown ObjectSelect;
         [SerializeField] private Transform PositionToCreate;
+
+        [Header("UI")]
         [SerializeField] private Button CreateButton;
+        [SerializeField] private List<GameObject> ObjectsToDesactive;
+        [SerializeField] private List<GameObject> ObjectsToReset;
+
+        private void Start()
+        {
+            CheckObjectsToDesactive();
+        }
 
         public void CreateObject()
         {
@@ -26,10 +39,10 @@ namespace VisualizationPipeline.Assets.Scripts
 
             if (ObjectSelect.value == (int)ObjectsTypes.Cube)
                 objectToCreate = CubePrefab;
-                
+
             if (ObjectSelect.value == (int)ObjectsTypes.Capsule)
                 objectToCreate = CapsulePrefab;
-            
+
             Instantiate(
                 objectToCreate,
                 // When is a custom object, using PositionToCreate.position
@@ -40,24 +53,44 @@ namespace VisualizationPipeline.Assets.Scripts
                 objectToCreate.transform.rotation,
                 Objects.transform
             );
+
+            CheckObjectsToDesactive();
         }
 
 
         public void HandleSelectedValue()
         {
-            // if (ObjectSelect.value != (int)ObjectsTypes.Custom)
-            // {
-            //     CreateButton.interactable = true;
-            //     return;
-            // }
-
-            // CreateButton.interactable = false;
+            CheckObjectsToDesactive();
         }
 
         public void DeleteObjectInPipeline()
         {
             if (ObjectInPipeline != null)
+            {
                 Destroy(ObjectInPipeline);
+                ObjectsToDesactive.ForEach(x => x.SetActive(false));
+                CheckObjectsToReset();
+            }
+        }
+
+        private void CheckObjectsToDesactive() =>
+            ObjectsToDesactive.ForEach(obj => obj.SetActive(ObjectInPipeline != null));
+
+        private void CheckObjectsToReset()
+        {
+            ObjectsToReset.ForEach(obj  => 
+            {
+                var pipelineController = obj.GetComponent<BasePipeline>();
+
+                if (pipelineController is null)
+                    return;
+                
+                pipelineController.Reset();
+            });
+        }
+
+        public override void Reset()
+        {
         }
     }
 }

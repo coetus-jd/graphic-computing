@@ -26,6 +26,12 @@ namespace VisualizationPipeline.Assets.Scripts
             Light.color = color;
         }
 
+        public override void Reset()
+        {
+            Intensity.text = "";
+            HexColor.text = "";
+        }
+
         private string HandleHexColor(string hexColor) => 
             hexColor.StartsWith("#")
                 ? hexColor

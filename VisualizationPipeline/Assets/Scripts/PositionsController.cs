@@ -25,6 +25,13 @@ namespace VisualizationPipeline.Assets.Scripts
             ObjectInPipeline.transform.position = new Vector3(x, y, z);
         }
 
+        public override void Reset()
+        {
+            X.text = "";
+            Y.text = "";
+            Z.text = "";
+        }
+
         private void HandleUserInput()
         {
             var x = float.Parse(string.IsNullOrEmpty(X.text) ? "0" : X.text);

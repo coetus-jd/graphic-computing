@@ -20,5 +20,10 @@ namespace VisualizationPipeline.Assets.Scripts
 
             ObjectInPipeline.transform.localScale = new Vector3(1, 1, 1) * scale;
         }
+
+        public override void Reset()
+        {
+            Slider.value = 0f;
+        }
     }
 }

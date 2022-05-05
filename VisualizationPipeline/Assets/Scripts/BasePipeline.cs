@@ -11,4 +11,6 @@ public abstract class BasePipeline : MonoBehaviour
     {
         get { return GameObject.FindGameObjectWithTag(Tags.ObjectInPipeline); }
     }
+
+    public abstract void Reset();
 }
