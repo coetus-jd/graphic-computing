@@ -11,6 +11,7 @@ namespace VisualizationPipeline.Assets.Scripts
         [SerializeField] private GameObject SpherePrefab;
         [SerializeField] private Dropdown ObjectSelect;
         [SerializeField] private Transform PositionToCreate;
+        [SerializeField] private Button CreateButton;
 
         public void CreateObject()
         {
@@ -34,6 +35,24 @@ namespace VisualizationPipeline.Assets.Scripts
                 Quaternion.identity,
                 Objects.transform
             );
+        }
+
+
+        public void HandleSelectedValue()
+        {
+            if (ObjectSelect.value != (int)ObjectsTypes.Custom)
+            {
+                CreateButton.interactable = true;
+                return;
+            }
+
+            CreateButton.interactable = false;
+        }
+
+        public void DeleteObjectInPipeline()
+        {
+            if (ObjectInPipeline != null)
+                Destroy(ObjectInPipeline);
         }
     }
 }
