@@ -22,7 +22,6 @@ namespace VisualizationPipeline.Assets.Scripts
             var y = float.Parse(string.IsNullOrEmpty(Y.text) ? "0" : Y.text);
             var z = float.Parse(string.IsNullOrEmpty(Z.text) ? "0" : Z.text);
 
-            Debug.Log($"{x},{y},{z}");
             ObjectInPipeline.transform.position = new Vector3(x, y, z);
         }
 

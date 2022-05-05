@@ -153,6 +153,7 @@ Transform:
   - {fileID: 2099286651}
   - {fileID: 1223225011}
   - {fileID: 982538140}
+  - {fileID: 392697956}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1096,13 +1097,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306582331}
-  m_LocalRotation: {x: 0.10251523, y: -0, z: -0, w: 0.9947314}
-  m_LocalPosition: {x: -6.08, y: 0.78, z: -8.24}
+  m_LocalRotation: {x: 0.4432796, y: 0.07198901, z: 0.1533351, w: 0.88023245}
+  m_LocalPosition: {x: -6.08, y: 8.6, z: -6.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1775639897}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 11.768, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.315, y: 23.762, z: 30.796}
 --- !u!108 &306582333
 Light:
   m_ObjectHideFlags: 0
@@ -1112,13 +1113,13 @@ Light:
   m_GameObject: {fileID: 306582331}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.87867486, g: 1, b: 0.6273585, a: 1}
-  m_Intensity: 5
-  m_Range: 17.123915
-  m_SpotAngle: 119.85974
-  m_InnerSpotAngle: 21.80208
+  m_Color: {r: 0.67368424, g: 1, b: 0, a: 1}
+  m_Intensity: 10
+  m_Range: 32.98315
+  m_SpotAngle: 64.14478
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1154,7 +1155,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1305,7 +1306,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 16afa7f1030aa5c48aa27ae9fc4fa825, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1582,6 +1583,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &392697955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392697956}
+  - component: {fileID: 392697957}
+  m_Layer: 0
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392697956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392697955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9995565}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392697957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392697955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bcf1c45ab9249448383627c845385e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objects: {fileID: 0}
+  Light: {fileID: 306582333}
+  HexColor: {fileID: 1670726852}
+  Intensity: {fileID: 1804609624}
 --- !u!1 &420404653
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,7 +6080,20 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392697957}
+        m_TargetAssemblyTypeName: VisualizationPipeline.Assets.Scripts.LightController,
+          Assembly-CSharp
+        m_MethodName: ChangeLightSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -6597,7 +6658,20 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392697957}
+        m_TargetAssemblyTypeName: VisualizationPipeline.Assets.Scripts.LightController,
+          Assembly-CSharp
+        m_MethodName: ChangeLightSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -6991,8 +7065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 69.7, y: -13.194489}
-  m_SizeDelta: {x: 83.6312, y: 26.389}
+  m_AnchoredPosition: {x: 92.34509, y: -13.194489}
+  m_SizeDelta: {x: 128.9214, y: 26.389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820675848
 MonoBehaviour:
@@ -7014,9 +7088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Rotate
-
-'
+  m_text: Rotate (Y)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
