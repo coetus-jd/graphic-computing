@@ -9,19 +9,20 @@ namespace VisualizationPipeline.Assets.Scripts
     {
         [SerializeField] private GameObject CubePrefab;
         [SerializeField] private GameObject CapsulePrefab;
+        [SerializeField] private GameObject CustomObjectPrefab;
         [SerializeField] private Dropdown ObjectSelect;
         [SerializeField] private Transform PositionToCreate;
         [SerializeField] private Button CreateButton;
 
         public void CreateObject()
         {
-            if (ObjectSelect.value == (int)ObjectsTypes.Custom)
-                return;
-
             if (ObjectInPipeline != null)
                 Destroy(ObjectInPipeline);
 
             GameObject objectToCreate = null;
+
+            if (ObjectSelect.value == (int)ObjectsTypes.Custom)
+                objectToCreate = CustomObjectPrefab;
 
             if (ObjectSelect.value == (int)ObjectsTypes.Cube)
                 objectToCreate = CubePrefab;
@@ -40,13 +41,13 @@ namespace VisualizationPipeline.Assets.Scripts
 
         public void HandleSelectedValue()
         {
-            if (ObjectSelect.value != (int)ObjectsTypes.Custom)
-            {
-                CreateButton.interactable = true;
-                return;
-            }
+            // if (ObjectSelect.value != (int)ObjectsTypes.Custom)
+            // {
+            //     CreateButton.interactable = true;
+            //     return;
+            // }
 
-            CreateButton.interactable = false;
+            // CreateButton.interactable = false;
         }
 
         public void DeleteObjectInPipeline()

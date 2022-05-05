@@ -3369,6 +3369,7 @@ GameObject:
   - component: {fileID: 929533672}
   - component: {fileID: 929533673}
   - component: {fileID: 929533674}
+  - component: {fileID: 929533675}
   m_Layer: 0
   m_Name: CustomElement
   m_TagString: ObjectInPipeline
@@ -3439,6 +3440,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &929533675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929533671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8f1cd14f9e6984e9094a7479dc0c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vertices: []
+  Triangles: 
+  CurrentMesh: {fileID: 0}
+  Rotate: 2
+  Clockwise: 1
 --- !u!1 &952659869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5121,6 +5139,7 @@ MonoBehaviour:
   Objects: {fileID: 1775639896}
   CubePrefab: {fileID: 179776959477782610, guid: 26f23370ab506644486f1d27df35428d, type: 3}
   CapsulePrefab: {fileID: 6254030360043547135, guid: 341d652e3688e0240bb56cf99d0d94fa, type: 3}
+  CustomObjectPrefab: {fileID: 0}
   ObjectSelect: {fileID: 63463534}
   PositionToCreate: {fileID: 373330210}
   CreateButton: {fileID: 1818593027}
