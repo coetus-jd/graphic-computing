@@ -54,6 +54,7 @@ namespace VisualizationPipeline.Assets.Scripts
                 Objects.transform
             );
 
+            CheckObjectsToReset();
             CheckObjectsToDesactive();
         }
 
