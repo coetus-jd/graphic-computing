@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2272212075929090523}
   - component: {fileID: 2272212075929090520}
   - component: {fileID: 2272212075929090521}
+  - component: {fileID: -2698655352242737052}
   m_Layer: 0
   m_Name: CustomElement
   m_TagString: ObjectInPipeline
@@ -97,3 +98,17 @@ MonoBehaviour:
   Vertices: []
   Triangles: 
   CurrentMesh: {fileID: 0}
+--- !u!64 &-2698655352242737052
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272212075929090517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

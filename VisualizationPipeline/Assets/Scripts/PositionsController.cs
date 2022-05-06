@@ -10,9 +10,9 @@ namespace VisualizationPipeline.Assets.Scripts
         [SerializeField] private TMP_InputField Y;
         [SerializeField] private TMP_InputField Z;
 
-        private (float Min, float Max) RangeX = (-7, -1);
-        private (float Min, float Max) RangeY = (-3, 5);
-        private (float Min, float Max) RangeZ = (-2, 4);
+        private (float Min, float Max) RangeX = (-4, 4);
+        private (float Min, float Max) RangeY = (-4, 5);
+        private (float Min, float Max) RangeZ = (-3, 7);
 
         public void ChangeObjectPosition()
         {
