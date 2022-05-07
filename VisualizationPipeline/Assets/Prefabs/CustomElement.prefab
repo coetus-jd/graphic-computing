@@ -98,6 +98,10 @@ MonoBehaviour:
   Vertices: []
   Triangles: 
   CurrentMesh: {fileID: 0}
+  VerticesElementTag: VerticesText
+  TrianglesElementTag: TrianglesText
+  VerticesText: {fileID: 0}
+  TrianglesText: {fileID: 0}
 --- !u!64 &-2698655352242737052
 MeshCollider:
   m_ObjectHideFlags: 0

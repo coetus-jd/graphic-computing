@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using VisualizationPipeline.Assets.Scripts.Enums;
+using System.Linq;
 
 namespace VisualizationPipeline.Assets.Scripts
 {
@@ -9,8 +11,10 @@ namespace VisualizationPipeline.Assets.Scripts
         [SerializeField] private List<Vector3> Vertices;
         [SerializeField] private List<int> Triangles;
         [SerializeField] private Mesh CurrentMesh;
-        [SerializeField] private TMP_Text VerticesText;
-        [SerializeField] private TMP_Text TrianglesText;
+        [SerializeField] private string VerticesElementTag;
+        [SerializeField] private string TrianglesElementTag;
+        private GameObject VerticesText;
+        private GameObject TrianglesText;
 
         private (float Width, float Height) ValidScreenRange = (0, 0);
 
@@ -20,24 +24,22 @@ namespace VisualizationPipeline.Assets.Scripts
             GetComponent<MeshFilter>().sharedMesh = CurrentMesh;
             ValidScreenRange.Width = Screen.currentResolution.width / 2;
             ValidScreenRange.Height = Screen.currentResolution.height / 2;
-            // VerticesText.SetActive(true);
-            // TrianglesText.SetActive(true);
+
+            ConfigureUiElements();
         }
 
         private void OnDestroy()
         {
-            // VerticesText.SetActive(false);
-            // TrianglesText.SetActive(false);
+            VerticesText?.SetActive(false);
+            TrianglesText?.SetActive(false);
         }
 
         private void Update()
         {
-            if (!Input.GetMouseButtonDown(0))
+            if (!Input.GetMouseButtonDown((int)MouseButtons.Left))
                 return;
-
-            Debug.Log($"Screen: {ValidScreenRange.Width}");
-            Debug.Log($"Mouse: {Input.mousePosition.x}");
-            // Gambiarra
+            
+            // Limit click area
             if (Input.mousePosition.x > ValidScreenRange.Width)
                 return;
 
@@ -46,17 +48,12 @@ namespace VisualizationPipeline.Assets.Scripts
             Vertices.Add(verticePosition);
             Triangles.Add(Vertices.Count - 1);
 
-            // VerticesText.text = $"Vertices: {Vertices.Count}";
-            // TrianglesText.text =  $"Triangles: {(int)(Triangles.Count / 3)}";
+            VerticesText.GetComponent<TMP_Text>().text = $"Vertices: {Vertices.Count}";
+            TrianglesText.GetComponent<TMP_Text>().text =  $"Triangles: {(int)(Triangles.Count / 3)}";
 
             if ((Triangles.Count % 3) == 0)
                 CreateCustomObject();
         }
-
-        private Vector3 MousePosInWorldSpace() =>
-            Camera.main.ScreenToWorldPoint(
-                new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)
-            );
 
         public void CreateCustomObject()
         {
@@ -64,6 +61,23 @@ namespace VisualizationPipeline.Assets.Scripts
             CurrentMesh.vertices = Vertices.ToArray();
             CurrentMesh.triangles = Triangles.ToArray();
             CurrentMesh.RecalculateNormals();
+        }
+
+        private Vector3 MousePosInWorldSpace() =>
+            // The Z axis is 10 because the camera is -10 in Z
+            Camera.main.ScreenToWorldPoint(
+                new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)
+            );
+
+        private void ConfigureUiElements()
+        {
+            var allTexts = Resources.FindObjectsOfTypeAll<TMP_Text>();
+
+            VerticesText = allTexts.FirstOrDefault(x => x.tag == VerticesElementTag).gameObject;
+            TrianglesText = allTexts.FirstOrDefault(x => x.tag == TrianglesElementTag).gameObject;
+            
+            VerticesText?.SetActive(true);
+            TrianglesText?.SetActive(true);
         }
     }
 }

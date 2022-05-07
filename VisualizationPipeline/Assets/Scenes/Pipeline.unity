@@ -1198,7 +1198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &312327469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2447,11 +2447,11 @@ GameObject:
   - component: {fileID: 735283470}
   m_Layer: 5
   m_Name: Vertices
-  m_TagString: Untagged
+  m_TagString: VerticesText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &735283469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3281,11 +3281,11 @@ GameObject:
   - component: {fileID: 794827374}
   m_Layer: 5
   m_Name: Triangles
-  m_TagString: Untagged
+  m_TagString: TrianglesText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &794827373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4401,7 +4401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1071481610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5436,6 +5436,8 @@ MonoBehaviour:
   - {fileID: 1223225010}
   - {fileID: 982538139}
   - {fileID: 392697955}
+  VerticesText: {fileID: 0}
+  TrianglesText: {fileID: 0}
 --- !u!1 &1344149765
 GameObject:
   m_ObjectHideFlags: 0

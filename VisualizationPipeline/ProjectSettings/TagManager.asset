@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ObjectInPipeline
+  - VerticesText
+  - TrianglesText
   layers:
   - Default
   - TransparentFX

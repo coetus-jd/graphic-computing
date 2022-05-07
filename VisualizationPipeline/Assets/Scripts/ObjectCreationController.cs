@@ -45,11 +45,7 @@ namespace VisualizationPipeline.Assets.Scripts
 
             Instantiate(
                 objectToCreate,
-                // When is a custom object, using PositionToCreate.position
-                // is putting the object out of camera's range
-                ObjectSelect.value == (int)ObjectsTypes.Custom
-                    ? new Vector3(0, 0, 0)
-                    : PositionToCreate.position,
+                PositionToCreate.position,
                 objectToCreate.transform.rotation,
                 Objects.transform
             );
