@@ -1,0 +1,3 @@
+[submodule "a-frame-vr"]
+	path = a-frame-vr
+	url = https://github.com/coetus-jd/a-frame-vr.git
