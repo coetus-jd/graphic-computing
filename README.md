@@ -21,10 +21,10 @@ https://user-images.githubusercontent.com/42717522/172026158-9bb2ade5-2ad0-461b-
 ### [🖼️ Visualization pipeline](https://github.com/coetus-jd/graphic-computing/tree/main/VisualizationPipeline)
 
 <div>
-  <img src="./Docs/VisualizationPipeline/Home.png" width="450px" height="auto"/>
-  <img src="./Docs/VisualizationPipeline/DynamicObject.png" width="450px" height="auto"/>
-  <img src="./Docs/VisualizationPipeline/Cube.png" width="450px" height="auto"/>
-  <img src="./Docs/VisualizationPipeline/Capsule.png" width="450px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/Home.png" width="425px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/DynamicObject.png" width="425px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/Cube.png" width="425px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/Capsule.png" width="425px" height="auto"/>
 </div>
 
 ### [🧊 A-Frame](https://github.com/coetus-jd/a-frame-vr)
