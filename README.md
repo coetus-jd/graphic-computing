@@ -16,6 +16,7 @@ Studies and activities of the discipline of Graphic Computing
 ## :eyes: Overview
 
 ### [🖐🏻 Unconventional Game](https://github.com/coetus-jd/unconventional-game)
+https://user-images.githubusercontent.com/42717522/172026158-9bb2ade5-2ad0-461b-b84f-c56b84128582.mp4
 
 ### [Visualization pipeline](https://github.com/coetus-jd/graphic-computing/tree/main/VisualizationPipeline)
 
@@ -27,7 +28,7 @@ Studies and activities of the discipline of Graphic Computing
 </div>
 
 ### [🧊 A-Frame](https://github.com/coetus-jd/a-frame-vr)
-
+<img src="https://raw.githubusercontent.com/coetus-jd/a-frame-vr/main/docs/home.png" width="1000px" height="auto"/> <br/><br/>
 ## :open_book: About 
 This project contains 
 
