@@ -1,3 +1,6 @@
 [submodule "a-frame-vr"]
 	path = a-frame-vr
 	url = https://github.com/coetus-jd/a-frame-vr.git
+[submodule "unconventional-game"]
+	path = unconventional-game
+	url = https://github.com/coetus-jd/unconventional-game.git
