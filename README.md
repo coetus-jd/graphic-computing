@@ -4,7 +4,7 @@
 </h1>
 
 <p align="right">
-🖼️ Studies and activities of the discipline of Graphic Computing
+Studies and activities of the discipline of Graphic Computing
   <br><br>
   <!-- License -->
   <a>
@@ -22,20 +22,20 @@
 </p>
 
 ## :open_book: About 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-# Features
-- 🤠 Lorem Ipsum is simply dummy text of the printing and typesetting industry
-- ✨ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-- 👍 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+This project contains 
 
 ## :bricks: This project was built with: 
-- [Awesome technology here](http://link.here.com)
+- [A-Frame](https://aframe.io/)
+- [A-Frame Environment Component](https://github.com/supermedium/aframe-environment-component)
+- [Unity](https://unity.com/)
+- [Python](https://www.python.org/)
+- [OpenCV](https://opencv.org/)
+- [Mediapipe](https://mediapipe.dev/)
 
 ## 🏄‍♂️ Quick Start
- 1. Clone this repository `git clone https://github.com/pferreirafabricio/inmana.git`;
- 2. Enter in the project's folder: `cd ?`
- 3. Finally `...` 😃
+ 1. Clone this repository `git clone https://github.com/coetus-jd/graphic-computing.git`
+ 2. Enter in the project's folder: `cd graphic-computing`
+ 3. Run whatever project you want 😃
  
 ## :recycle: Contribute
  1. Fork this repository;
@@ -43,10 +43,5 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
  3. Commit your changes: ```git commit -m 'feat: My new feature'```
  4. Push your branch: ```git push origin my-feature```
 
-
 ## :page_with_curl:	License
-This project is under the ??? license. Take a look at the [LICENSE](LICENSE.md) file for more details.
-
-## 📚 Learn more
-
-  * Guides: https://super.guide.com
+This project is under the GPL-3.0 license. Take a look at the [LICENSE](LICENSE) file for more details.
