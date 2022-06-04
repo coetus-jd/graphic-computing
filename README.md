@@ -14,12 +14,19 @@ Studies and activities of the discipline of Graphic Computing
 <br>
 
 ## :eyes: Overview
-<p align="center">
-  <img src="./Docs/VisualizationPipeline/Home.png" width="1000px" height="auto"/> <br/><br/>
-  <img src="./Docs/VisualizationPipeline/DynamicObject.png" width="1000px" height="auto"/> <br/><br/>
-  <img src="./Docs/VisualizationPipeline/Cube.png" width="1000px" height="auto"/> <br/><br/>
-  <img src="./Docs/VisualizationPipeline/Capsule.png" width="1000px" height="auto"/> <br/><br/>
-</p>
+
+### [🖐🏻 Unconventional Game](https://github.com/coetus-jd/unconventional-game)
+
+### [Visualization pipeline](https://github.com/coetus-jd/graphic-computing/tree/main/VisualizationPipeline)
+
+<div>
+  <img src="./Docs/VisualizationPipeline/Home.png" width="500px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/DynamicObject.png" width="500px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/Cube.png" width="500px" height="auto"/>
+  <img src="./Docs/VisualizationPipeline/Capsule.png" width="500px" height="auto"/>
+</div>
+
+### [🧊 A-Frame](https://github.com/coetus-jd/a-frame-vr)
 
 ## :open_book: About 
 This project contains 
