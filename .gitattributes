@@ -9,3 +9,4 @@
 *.vue linguist-language=vue
 *.ps1 linguist-language=powershell
 *.shader linguist-vendored
+*.cginc linguist-vendored
