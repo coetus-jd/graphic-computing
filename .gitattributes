@@ -8,3 +8,4 @@
 *.js linguist-language=javascript
 *.vue linguist-language=vue
 *.ps1 linguist-language=powershell
+*.shader linguist-vendored
